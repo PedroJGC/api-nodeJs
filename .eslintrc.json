@@ -1,28 +1,29 @@
 {
-    "env": {
-      "browser": true,
-      "es2021": true
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "plugin:stylelint/recommended",
+    "plugin:json/recommended"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
     },
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:prettier/recommended",
-      "plugin:stylelint/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "ecmaFeatures": {
-        "jsx": true
-      },
-      "ecmaVersion": 2024,
-      "sourceType": "module"
-    },
-    "plugins": ["react", "@typescript-eslint", "prettier", "stylelint"],
-    "rules": {
-      "prettier/prettier": "error",
-      "indent": ["error", 2],
-      "max-len": ["warn", { "code": 80 }]
-      // suas regras personalizadas
-    }
+    "ecmaVersion": 2024,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier", "stylelint", "json"],
+  "rules": {
+    "prettier/prettier": "error",
+    "indent": ["error", 2],
+    "max-len": ["warn", { "code": 80 }]
+    // suas regras personalizadas
   }
+}
